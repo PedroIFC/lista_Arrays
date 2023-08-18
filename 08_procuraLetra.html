@@ -6,11 +6,16 @@
     //Apresente para o usuário se a LETRA que ele quer procurar existe ou não na palavra digitada e qual a primeira posição da LETRA na PALAVRA.
 
     //ENTRADA
-
-
+    const palavra = prompt(`Insira uma palavra sem letras repetitidas.`.trim());
+    const letra = prompt(`Insira uma letra da palavra que você acabou de digitar.`.trim());
+    let posicao = palavra.indexOf(letra);
     //PROCESSAMENTO
-
+    if (posicao !== -1) {
+        alert(`A letra ${letra} está na posição ${posicao} da palavra ${palavra}.`)
+    }
 
     //SAÍDA
-
+    else {
+        alert(`Parceirin, a letra ${letra} não está contida na palavra ${palavra}.`);
+    }
 </script>

@@ -4,11 +4,31 @@
     //Retorne os elementos do array, separando-os por hífen (n1 - n2 - n3).
 
     //ENTRADA
-
-
+    const n1 = Number(prompt('Insira o primeiro número').trim());
+    const n2 = Number(prompt('Insira o segundo número').trim());
+    const n3 = Number(prompt('Insira o terceiro número').trim());
+    let array = [];
     //PROCESSAMENTO
-
-
-    //SAÍDA
-
+    if(n1 < n2 && n2 < n3 ){
+        array = [n3, n2, n1];
+    }
+    else if(n2 < n1 && n1 < n3 ){
+        array = [n3, n1, n2];
+    }
+    else if(n2 < n3 && n3 < n1 ){
+        array = [n1, n3, n2];
+    }
+    else if(n1 < n3 && n3 < n2 ){
+        array = [n2, n3, n1];
+    }
+    else if(n3 < n1 && n1 < n2 ){
+        array = [n2, n1, n3];
+    }
+    else if(n3 < n2 && n2 < n1 ){
+        array = [n1, n2, n3];
+    }
+    else{
+        alert('Os numeros são iguais');
+    }
+    alert(`Os números em ordem decrescente são ${array.join('-')}.`);
 </script>
